@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 int main(){
-    float cylinderRadius;
-    float cylinderHeight;
+    int cylinderRadius;
+    int cylinderHeight;
 
     printf("Enter Radius: ");
-    scanf("%f", &cylinderRadius);
+    scanf("%d", &cylinderRadius);
 
     printf("Enter Height: ");
-    scanf("%f",&cylinderHeight);
+    scanf("%d",&cylinderHeight);
 
     float cylinderArea = 3.14 * cylinderRadius * cylinderRadius * cylinderHeight;
-    printf("Area of Cylinder: %f",cylinderArea);
+    printf("Area of Cylinder with radius %d and height %d is %f",cylinderRadius,cylinderHeight,cylinderArea);
 }
