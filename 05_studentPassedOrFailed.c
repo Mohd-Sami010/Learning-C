@@ -1,5 +1,10 @@
 #include<stdio.h>
 
+#define NUM_OF_SUBJECTS 3
+#define MAX_MARKS 100
+#define TOTAL_PASS_PERCENTAGE 40.0
+#define PASS_PERCENTAGE 33
+
 int main(){
     int marksInSubject1;
     int marksInSubject2;
@@ -11,15 +16,15 @@ int main(){
     printf("Enter marks of Subject 2: ");
     scanf("%d",&marksInSubject2);
 
-    printf("Enter marks of Subject 2: ");
+    printf("Enter marks of Subject 3: ");
     scanf("%d", &marksInSubject3);
 
 
-    float totalPercentage = (marksInSubject1 + marksInSubject2 + marksInSubject3)/300.0 *100;
-    if (totalPercentage < 40.0){
+    float totalPercentage = (marksInSubject1 + marksInSubject2 + marksInSubject3)/NUM_OF_SUBJECTS *100;
+    if (totalPercentage < TOTAL_PASS_PERCENTAGE){
         printf("Your total percantage is %f, YOU FAILED THE EXAM!", totalPercentage);
     }
-    else if (marksInSubject1 < 33 || marksInSubject2 < 33 || marksInSubject3 < 33){
+    else if (marksInSubject1 < PASS_PERCENTAGE || marksInSubject2 < PASS_PERCENTAGE || marksInSubject3 <PASS_PERCENTAGE){
         printf("YOU FAILED THE EXAM");
     }
     else{
