@@ -1,11 +1,14 @@
 #include<stdio.h>
 
-#define NUM_OF_SUBJECTS 3
-#define MAX_MARKS 100
-#define TOTAL_PASS_PERCENTAGE 40.0
-#define PASS_PERCENTAGE 33
+
 
 int main(){
+
+    const int NUM_OF_SUBJECTS = 3;
+    const int MAX_MARKS = 100;
+    const float TOTAL_PASS_PERCENTAGE = 40.0;
+    const int PASS_PERCENTAGE = 33;
+
     int marksInSubject1;
     int marksInSubject2;
     int marksInSubject3;
