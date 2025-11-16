@@ -43,6 +43,7 @@ struct Node * DeleteAtEnd(struct Node * head){
     struct Node * deletedNode = ptr -> nextNode;
     ptr -> nextNode = NULL;
     free(deletedNode);
+    return head;
 }
 
 void main(){
