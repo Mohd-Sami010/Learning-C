@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Read Static array and print dynamic array
 int main(){
     int staticArr[] = {5, 7, 2, 8, 1, 87, 342, 5, 4};
     int arrSize = sizeof(staticArr)/sizeof(int);

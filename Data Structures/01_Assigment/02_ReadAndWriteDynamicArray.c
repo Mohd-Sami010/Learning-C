@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// Read and write dynamic array. Find maximum, minimum, average of elements.
 int main(){
     int size;
     int *arr;

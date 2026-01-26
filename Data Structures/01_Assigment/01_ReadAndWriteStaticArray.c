@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+// Read and write static array. Find maximum, minimum, average of elements.
 int main(){
     int arr[10];
 
