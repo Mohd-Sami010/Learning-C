@@ -1,0 +1,19 @@
+Why in C index of array start with 0
+
+1. Pointer Arithmetic and Offsets:
+In C array index starts from 0, because the index represents the memory offset not the actual position.
+● Zero offset [0]: For the first element, its distance from memory address is 0. Therefore arr[0] points directly to base address.
+● N-th Element: The second element is 1 position away from start ie base address. So, its index is 1.
+
+2. Computational Efficiency:
+Using 0-based indexing makes memory address calculations faster for the computer: 
+● Calculation: Address = BaseAddress + (Index * SizeOfElement).
+● One-Based Penalty: If indices started at 1, the compiler would need to perform an extra subtraction for every access: Address = BaseAddress + ((Index - 1) * SizeOfElement). For early low-level languages like C, avoiding this extra operation was critical for performance. 
+
+3. Historical Precedent (BCPL):
+C's design was heavily influenced by the language BCPL, which also used 0-based indexing. In BCPL, arrays were simply pointers, and the [] notation was just a convenient way to perform pointer arithmetic. When Dennis Ritchie created C, he maintained this "shorthand" to keep the language close to the machine hardware. 
+
+4. Mathematical Elegance:
+Computer scientist Edsger Dijkstra famously argued for 0-based indexing in his 1982 paper, "Why numbering should start at zero". He noted that: 
+● Representing a range of \(N\) elements as 0 ≤ i < N is cleaner than 1 ≤ i < N + 1.
+● It simplifies calculations for multi-dimensional arrays and modular arithmetic (e.g., circular buffers). 
