@@ -1,0 +1,11 @@
+Data structure refers to the method of organizing and storing data efficiently in a computer's memory so it can be accessed and manipulated by programs. Structured data refers to the actual data that has been organized into a predefined, formatted structure, typically in a tabular format.
+
+Data Structure
+A data structure is an abstract concept that defines a way of arranging data elements, the relationships among them, and the functions or operations that can be applied to the data. It is a programmatic element used during software development to manage data flow and storage in an application. 
+* Examples: Arrays, linked lists, stacks, queues, trees, and graphs are all examples of data structures.
+* Purpose: To manage data in a computer's RAM, enabling efficient organization, processing, retrieval, and storage by software systems.
+
+Structured Data
+Structured data is a classification of data (along with unstructured and semi-structured data) that conforms to a strict, predefined data model or schema. This makes it easily searchable and analyzable using conventional tools like SQL.
+* Examples: Data in relational databases, spreadsheets (like Excel), and CSV files, such as names, addresses, and credit card numbers organized into specific columns and rows.
+* Purpose: To store information in a standardized format for easy analysis, reporting, and use with machine learning applications.
