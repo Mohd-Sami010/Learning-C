@@ -52,10 +52,9 @@ int main(){
         transposeOfSparseA[i][0] = sparseOfA[i][1];
         transposeOfSparseA[i][1] = sparseOfA[i][0];
         transposeOfSparseA[i][2] = sparseOfA[i][2];
-        // Sort the transpose by column index
+
         for (int j = i; j > 0; j--){
             if (transposeOfSparseA[j][0] < transposeOfSparseA[j-1][0]){
-                // Swap rows
                 int temp[3];
                 for (int k = 0; k < 3; k++){
                     temp[k] = transposeOfSparseA[j][k];
