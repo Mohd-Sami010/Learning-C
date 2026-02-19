@@ -1,5 +1,5 @@
 /*
-Program Name : Partial Derivatives and Chain Rule Verification1
+Program Name : Partial Derivatives and Chain Rule Verification
 
 Description  :
     This program computes partial derivatives of a function
