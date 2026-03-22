@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 #define MAX 100
 
@@ -15,8 +14,6 @@ void bfs(int start)
     while (front <= rear)
     {
         int node = queue[front++];
-        printf("%d ", node);
-
         for (int i = 0; i < n; i++)
         {
             if (adj[node][i] == 1 && !visited[i])
@@ -26,6 +23,17 @@ void bfs(int start)
             }
         }
     }
+}
+
+int isConnected()
+{
+    bfs(0);
+    for (int i = 0; i < n; i++)
+    {
+        if (!visited[i])
+            return 0; // some vertex was never reached
+    }
+    return 1;
 }
 
 int main()
@@ -39,11 +47,13 @@ int main()
         printf("Enter edge (u v): ");
         scanf("%d %d", &u, &v);
         adj[u][v] = 1;
-        adj[v][u] = 1; // undirected graph
+        adj[v][u] = 1;
     }
 
-    printf("BFS Traversal starting from vertex 0: ");
-    bfs(0);
-    printf("\n");
+    if (isConnected())
+        printf("The graph IS connected.\n");
+    else
+        printf("The graph is NOT connected.\n");
+
     return 0;
 }

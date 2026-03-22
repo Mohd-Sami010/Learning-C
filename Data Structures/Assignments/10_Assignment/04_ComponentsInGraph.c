@@ -8,8 +8,6 @@ int n, e;
 void dfs(int node)
 {
     visited[node] = 1;
-    printf("%d ", node);
-
     for (int i = 0; i < n; i++)
     {
         if (adj[node][i] == 1 && !visited[i])
@@ -21,7 +19,7 @@ void dfs(int node)
 
 int main()
 {
-    int u, v;
+    int u, v, components = 0;
     printf("Enter number of vertices and edges: ");
     scanf("%d %d", &n, &e);
 
@@ -33,8 +31,22 @@ int main()
         adj[v][u] = 1;
     }
 
-    printf("DFS Traversal starting from vertex 0: ");
-    dfs(0);
-    printf("\n");
+    // Each DFS call that starts from an unvisited node = one new component
+    for (int i = 0; i < n; i++)
+    {
+        if (!visited[i])
+        {
+            dfs(i);
+            components++;
+        }
+    }
+
+    printf("Number of connected components: %d\n", components);
+
+    if (components == 1)
+        printf("The graph IS connected.\n");
+    else
+        printf("The graph is NOT connected.\n");
+
     return 0;
 }
