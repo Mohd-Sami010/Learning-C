@@ -31,7 +31,6 @@ int main()
         adj[v][u] = 1;
     }
 
-    // Each DFS call that starts from an unvisited node = one new component
     for (int i = 0; i < n; i++)
     {
         if (!visited[i])

@@ -39,7 +39,7 @@ int main()
         printf("Enter edge (u v): ");
         scanf("%d %d", &u, &v);
         adj[u][v] = 1;
-        adj[v][u] = 1; // undirected graph
+        adj[v][u] = 1;
     }
 
     printf("BFS Traversal starting from vertex 0: ");
